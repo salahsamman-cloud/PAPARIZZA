@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>PAPARIZZA</title>
+  <meta charset="UTF-8" />
+
+  <!-- مهم حتى يكون الموقع مناسب للموبايل -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= restaurantName %> Menu</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-    <h1>PAPARIZZA</h1>
-    <p>Italian Pizza & Panuzzo</p>
+  <header class="header">
+    <div class="logo">
+      <h1><%= restaurantName %></h1>
+      <p>Italian Menu | القائمة الإيطالية</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <% menuData.forEach(category => { %>
+
+      <section class="category">
+
+        <h2><%= category.category %></h2>
+
+        <% if (category.items.length === 0) { %>
+
+          <p class="empty">Items will be added soon | سيتم إضافة الأصناف قريباً</p>
+
+        <% } else { %>
+
+          <% category.items.forEach(item => { %>
+
+            <div class="menu-item">
+
+              <img src="<%= item.image %>" alt="<%= item.nameEn %>" />
+
+              <div class="item-info">
+
+                <div class="item-title">
+                  <div>
+                    <h3><%= item.nameEn %></h3>
+                    <h4><%= item.nameAr %></h4>
+                  </div>
+
+                  <span><%= item.price %></span>
+                </div>
+
+                <p><%= item.descriptionEn %></p>
+                <p class="arabic"><%= item.descriptionAr %></p>
+
+              </div>
+
+            </div>
+
+          <% }) %>
+
+        <% } %>
+
+      </section>
+
+    <% }) %>
+
+  </main>
 
 </body>
 </html>
