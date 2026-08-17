@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 });
 
 // البورت
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // تشغيل السيرفر
 app.listen(PORT, () => {
