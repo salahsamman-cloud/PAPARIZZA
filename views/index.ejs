@@ -1,71 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EE2829" />
+    <title><%= restaurantName %> Menu</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main class="menu-board">
+      <header class="header">
+        <h1>PAPARIZZA</h1>
+        <p class="header__subtitle">PIZZA &amp; ITALIAN SANDWICHES</p>
+      </header>
 
-  <!-- مهم حتى يكون الموقع مناسب للموبايل -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <div class="checker" aria-hidden="true"></div>
 
-  <title><%= restaurantName %> Menu</title>
+      <nav class="menu-tabs" aria-label="Main menu sections">
+        <button class="menu-tab is-active" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="true">BREAKFAST</button>
+        <button class="menu-tab" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="false">LUNCH</button>
+        <button class="menu-tab" type="button" data-tab="drinks" aria-controls="drinks-panel" aria-selected="false">DRINKS</button>
+      </nav>
 
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
+      <% ["breakfast", "lunch", "drinks"].forEach(mainSection => { %>
+        <div class="menu-panel" id="<%= mainSection %>-panel" data-panel="<%= mainSection %>" <%= mainSection === "breakfast" ? "" : "hidden" %>>
+          <% menuData.filter(category => category.mainSection === mainSection).forEach(category => { %>
+            <section class="category" id="<%= category.id %>" aria-labelledby="<%= category.id %>-title">
+              <header class="category__heading">
+                <h2 id="<%= category.id %>-title"><%= category.categoryEn %></h2>
+              </header>
 
-  <header class="header">
-    <div class="logo">
-      <h1><%= restaurantName %></h1>
-      <p>Italian Menu | القائمة الإيطالية</p>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <% menuData.forEach(category => { %>
-
-      <section class="category">
-
-        <h2><%= category.category %></h2>
-
-        <% if (category.items.length === 0) { %>
-
-          <p class="empty">Items will be added soon | سيتم إضافة الأصناف قريباً</p>
-
-        <% } else { %>
-
-          <% category.items.forEach(item => { %>
-
-            <div class="menu-item">
-
-              <img src="<%= item.image %>" alt="<%= item.nameEn %>" />
-
-              <div class="item-info">
-
-                <div class="item-title">
-                  <div>
-                    <h3><%= item.nameEn %></h3>
-                    <h4><%= item.nameAr %></h4>
-                  </div>
-
-                  <span><%= item.price %></span>
-                </div>
-
-                <p><%= item.descriptionEn %></p>
-                <p class="arabic"><%= item.descriptionAr %></p>
-
+              <div class="items-grid">
+                <% category.items.forEach(item => { %>
+                  <article class="menu-item">
+                    <% if (item.image) { %>
+                      <img class="menu-item__image" src="<%= item.image %>" alt="<%= item.nameEn %>" loading="lazy" />
+                    <% } else { %>
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    <% } %>
+                    <div class="menu-item__content">
+                      <h3 dir="ltr"><%= item.nameEn %></h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl"><%= item.nameAr %></p>
+                      <p class="description" dir="ltr"><%= item.descriptionEn %></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"><%= item.descriptionAr %></p>
+                      <% if (item.smallPrice && item.largePrice) { %>
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> <%= item.smallPrice %></span>
+                          <span><b>MEDIUM</b> <%= item.largePrice %></span>
+                        </div>
+                      <% } else if (item.price) { %>
+                        <p class="price"><%= item.price %></p>
+                      <% } else { %>
+                        <p class="price price--pending">Price coming soon</p>
+                      <% } %>
+                    </div>
+                  </article>
+                <% }) %>
               </div>
-
-            </div>
-
+            </section>
           <% }) %>
+        </div>
+      <% }) %>
 
-        <% } %>
-
-      </section>
-
-    <% }) %>
-
-  </main>
-
-</body>
+      <footer class="menu-footer"><div class="checker" aria-hidden="true"></div><p>Buon appetito!</p></footer>
+    </main>
+    <script src="/js/menu.js"></script>
+  </body>
 </html>

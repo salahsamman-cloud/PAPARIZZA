@@ -1,0 +1,104 @@
+:root {
+  --red: #ee2829;
+  --red-dark: #9d151b;
+  --cream: #fffaf4;
+  --paper: #ffffff;
+  --ink: #2d1714;
+  --muted: #705c58;
+  --line: #eadbd2;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--red); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+button { font: inherit; }
+
+/* Give all Arabic copy a readable RTL rhythm without changing its wording. */
+[lang="ar"] {
+  direction: rtl;
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+.menu-board {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 16px auto;
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgb(38 0 0 / 32%);
+}
+
+.header { padding: 2rem 1rem 1.7rem; color: #fff; text-align: center; background: var(--red); }
+.header__eyebrow { margin: 0 0 .45rem; color: #ffe2dc; font-size: .7rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.header h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 8vw, 4.75rem); letter-spacing: .08em; line-height: 1; text-shadow: 0 3px 0 rgb(0 0 0 / 16%); }
+.header__subtitle { margin: .65rem 0 0; color: #fff; font-size: .9rem; font-weight: 700; }
+
+/* The checkerboard frames the tabs and footer; content always sits on plain surfaces. */
+.checker { height: 20px; background: conic-gradient(var(--red) 25%, #fff 0 50%, var(--red) 0 75%, #fff 0) 0 / 28px 28px; }
+
+.menu-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .55rem;
+  padding: .85rem 1rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-tab {
+  min-height: 3.15rem;
+  padding: .65rem .35rem;
+  color: var(--red-dark);
+  font-size: clamp(.72rem, 2.7vw, .95rem);
+  font-weight: 900;
+  letter-spacing: .04em;
+  background: #fff5f1;
+  border: 2px solid var(--red);
+  border-radius: .65rem;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+.menu-tab:hover, .menu-tab:focus-visible { transform: translateY(-2px); outline: none; }
+.menu-tab:focus-visible { box-shadow: 0 0 0 3px rgb(238 40 41 / 30%); }
+.menu-tab.is-active { color: #fff; background: var(--red); box-shadow: 0 5px 12px rgb(157 21 27 / 25%); }
+
+.menu-panel[hidden] { display: none; }
+.category { padding: 2rem clamp(1rem, 4vw, 2.5rem); border-bottom: 1px solid var(--line); }
+.category:nth-child(even) { background: var(--paper); }
+.category__heading { display: flex; align-items: baseline; justify-content: center; gap: .6rem; margin-bottom: 1.2rem; text-align: center; }
+.category__heading h2 { margin: 0; color: var(--red-dark); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.85rem, 5vw, 2.7rem); font-style: italic; }
+.category__heading p { margin: 0; color: var(--muted); font-size: 1rem; font-weight: 600; }
+
+.items-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.15rem; }
+.menu-item { display: flex; flex-direction: column; overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 7px 18px rgb(75 28 20 / 9%); }
+.menu-item__image, .menu-item__placeholder { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: 3px solid var(--red); }
+.menu-item__placeholder { display: grid; place-content: center; color: #fff; background: linear-gradient(135deg, var(--red-dark), var(--red)); }
+.menu-item__placeholder span { font-family: Georgia, serif; font-size: 1.35rem; font-weight: 700; letter-spacing: .08em; }
+.menu-item__content { display: flex; flex: 1; flex-direction: column; padding: 1rem; }
+.menu-item h3 { margin: 0 0 .22rem; color: var(--red-dark); font-size: 1.17rem; }
+.menu-item p { margin-top: 0; }
+.item-name-ar { margin-bottom: .8rem; color: var(--red); font-size: 1rem; font-weight: 700; }
+.description { margin-bottom: .28rem; color: var(--muted); font-size: .85rem; line-height: 1.4; }
+.description--ar { margin-top: .15rem; margin-bottom: 1rem; font-size: .88rem; font-weight: 400; }
+.price, .pizza-prices { margin-top: auto; margin-bottom: 0; }
+.price { align-self: flex-start; padding: .4rem .68rem; color: #fff; font-size: .92rem; font-weight: 800; direction: ltr; background: var(--red); border-radius: 6px; }
+.price--pending { color: #95706a; font-size: .8rem; font-style: italic; background: transparent; }
+.pizza-prices { display: flex; flex-wrap: wrap; gap: .4rem; }
+.pizza-prices span { padding: .38rem .55rem; color: var(--red-dark); font-size: .8rem; font-weight: 800; background: #fff3ef; border: 1px solid #efc8bd; border-radius: 6px; }
+.pizza-prices b { font-size: .68rem; text-transform: uppercase; }
+.menu-footer { background: var(--red); color: #fff; text-align: center; }
+.menu-footer p { margin: 0; padding: 1.15rem; font-family: Georgia, serif; font-size: 1.15rem; font-style: italic; }
+
+@media (max-width: 700px) {
+  .menu-board { width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .header { padding: 1.65rem 1rem 1.4rem; }
+  .header__subtitle { font-size: .82rem; }
+  .menu-tabs { position: sticky; top: 0; z-index: 5; }
+  .category { padding: 1.75rem 1rem; }
+  .items-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .menu-item h3 { font-size: 1.25rem; }
+}
+
+@media (min-width: 701px) and (max-width: 920px) { .items-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
