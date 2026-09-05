@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EE2829" />
+    <title>PAPARIZZA Menu</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main class="menu-board">
+      <header class="header">
+        <h1>PAPARIZZA</h1>
+        <p class="header__subtitle">PIZZA &amp; ITALIAN SANDWICHES</p>
+        <a class="header__order" href="tel:0113338086" aria-label="Call PAPARIZZA to order at 0113338086">
+          <span>ORDER NOW / CALL TO ORDER</span>
+          <strong dir="ltr">0113338086</strong>
+        </a>
+      </header>
+
+      <div class="checker" aria-hidden="true"></div>
+
+      <nav class="menu-tabs" aria-label="Main menu sections">
+        <button class="menu-tab is-active" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="true">BREAKFAST</button>
+        <button class="menu-tab" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="false">LUNCH</button>
+        <button class="menu-tab" type="button" data-tab="drinks" aria-controls="drinks-panel" aria-selected="false">DRINKS</button>
+      </nav>
+
+      
+        <div class="menu-panel" id="breakfast-panel" data-panel="breakfast" >
+          
+            <section class="category" id="breakfast-pizza" aria-labelledby="breakfast-pizza-title">
+              <header class="category__heading">
+                <h2 id="breakfast-pizza-title">Pizza Breakfast</h2>
+              </header>
+
+              <div class="items-grid">
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/زعتر.jpeg" alt="Zaatar" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Zaatar</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">زعتر</p>
+                      <p class="description" dir="ltr">Traditional zaatar blend.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">خلطة زعتر تقليدية.</p>
+                      
+                        <p class="price">250</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/زعتر  مع قشقوان.jpeg" alt="Zaatar with Kashkaval" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Zaatar with Kashkaval</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">زعتر وقشقوان</p>
+                      <p class="description" dir="ltr">Zaatar topped with kashkaval cheese.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">زعتر مع جبنة قشقوان.</p>
+                      
+                        <p class="price">350</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/لبنة وزعتر --14.jpg" alt="Zaatar &amp; Labneh" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Zaatar &amp; Labneh</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">زعتر ولبنة</p>
+                      <p class="description" dir="ltr">Zaatar with creamy labneh.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">زعتر مع لبنة كريمية.</p>
+                      
+                        <p class="price">300</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/لبنة وزيتون --12.jpg" alt="Labneh &amp; Olives" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Labneh &amp; Olives</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">لبنة وزيتون</p>
+                      <p class="description" dir="ltr">Creamy labneh served with olives.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">لبنة كريمية مع زيتون.</p>
+                      
+                        <p class="price">300</p>
+                      
+                    </div>
+                  </article>
+                
+              </div>
+            </section>
+          
+            <section class="category" id="breakfast-panuzzo" aria-labelledby="breakfast-panuzzo-title">
+              <header class="category__heading">
+                <h2 id="breakfast-panuzzo-title">Panuzzo Breakfast</h2>
+              </header>
+
+              <div class="items-grid">
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/زعتر مع خضرة-36.jpg" alt="Zaatar with Vegetables" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Zaatar with Vegetables</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">زعتر مع خضرة</p>
+                      <p class="description" dir="ltr">Zaatar with fresh vegetables.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">زعتر مع خضرة طازجة.</p>
+                      
+                        <p class="price">350</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/لبنة مع خضرة --35.jpg" alt="Labneh with Vegetables" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Labneh with Vegetables</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">لبنة مع خضرة</p>
+                      <p class="description" dir="ltr">Creamy labneh with fresh vegetables.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">لبنة كريمية مع خضرة طازجة.</p>
+                      
+                        <p class="price">350</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/جبنة.jpeg" alt="Cheese" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Cheese</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">جبنة</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">350</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/حلوم مع بيستو-29.jpg" alt="Halloumi with Pesto" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Halloumi with Pesto</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">حلوم مع بيستو</p>
+                      <p class="description" dir="ltr">Grilled halloumi with pesto.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">حلوم مشوي مع بيستو.</p>
+                      
+                        <p class="price">450</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/حبش وفطر-30.jpg" alt="Turkey with Mushroom &amp; Rocket" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Turkey with Mushroom &amp; Rocket</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">حبش وفطر وجرجير</p>
+                      <p class="description" dir="ltr">Turkey, mushroom and fresh rocket.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">حبش مع فطر وجرجير طازج.</p>
+                      
+                        <p class="price">400</p>
+                      
+                    </div>
+                  </article>
+                
+              </div>
+            </section>
+          
+        </div>
+      
+        <div class="menu-panel" id="lunch-panel" data-panel="lunch" hidden>
+          
+            <section class="category" id="lunch-pizza" aria-labelledby="lunch-pizza-title">
+              <header class="category__heading">
+                <h2 id="lunch-pizza-title">Pizza</h2>
+              </header>
+
+              <div class="items-grid">
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا نابوليتان.jpeg" alt="Napoletana" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Napoletana</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">نابوليتان</p>
+                      <p class="description" dir="ltr">Napoletana sauce, mozzarella and parmesan.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">صوص نابوليتان، موزاريلا وبارميزان.</p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 350</span>
+                          <span><b>MEDIUM</b> 700</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا خضار --1.jpg" alt="Vegetables" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Vegetables</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">خضار</p>
+                      <p class="description" dir="ltr">Neapolitan sauce, mozzarella, mushroom, olives, bell pepper</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">صوص نابوليتان، موزريلا، فطر، زيتون، فليفلة</p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 400</span>
+                          <span><b>MEDIUM</b> 800</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا ماشروم--3.jpg" alt="Mushroom" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Mushroom</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">فطر</p>
+                      <p class="description" dir="ltr">Mushroom sauce, mushroom, mozzarella, parmesan</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">صوص الفطر، فطر، موزريلا، بارمزان</p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 400</span>
+                          <span><b>MEDIUM</b> 800</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا ترفل.jpeg" alt="Truffle" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Truffle</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">ترافل</p>
+                      <p class="description" dir="ltr">Truffle sauce, mushroom, mozzarella</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">صوص ترافل، فطر، موزريلا</p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 500</span>
+                          <span><b>MEDIUM</b> 1000</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا ببروني --8.jpg" alt="Pepperoni" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Pepperoni</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">بيروني</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 400</span>
+                          <span><b>MEDIUM</b> 800</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا حبش--5.jpg" alt="Turkey" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Turkey</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">حبش</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 350</span>
+                          <span><b>MEDIUM</b> 700</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا بيستو.jpeg" alt="Pesto" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Pesto</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">بيستو</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 400</span>
+                          <span><b>MEDIUM</b> 800</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا فورتشيز.jpeg" alt="Four Cheese" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Four Cheese</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">فور تشيز</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 400</span>
+                          <span><b>MEDIUM</b> 800</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا سموك تشيكن -_-7.jpg" alt="Smoky Chicken" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Smoky Chicken</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">سموكي تشكن</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 550</span>
+                          <span><b>MEDIUM</b> 1000</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+              </div>
+            </section>
+          
+            <section class="category" id="lunch-panuzzo" aria-labelledby="lunch-panuzzo-title">
+              <header class="category__heading">
+                <h2 id="lunch-panuzzo-title">Panuzzo</h2>
+              </header>
+
+              <div class="items-grid">
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشيكن كلاسيك --15.jpg" alt="Classic Chicken" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Classic Chicken</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">كلاسيك تشكن</p>
+                      <p class="description" dir="ltr">Fried chicken, chicken sauce, lettuce and mayonnaise.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">دجاج مقلي، صوص تشكن، خس ومايونيز.</p>
+                      
+                        <p class="price">450</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشكن باربركيو --20.jpg" alt="Chicken Barbecue" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Chicken Barbecue</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشكن باربكيو</p>
+                      <p class="description" dir="ltr">Chicken, barbecue sauce, lettuce and mayonnaise.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">دجاج، صوص باربكيو، خس ومايونيز.</p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشكن هاني ماستر --16.jpg" alt="Chicken Honey Mustard" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Chicken Honey Mustard</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشكن هني ماسترد</p>
+                      <p class="description" dir="ltr">Chicken, honey mustard, lettuce and mayonnaise.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">دجاج، هني ماسترد، خس ومايونيز.</p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشكن سبايسي--18.jpg" alt="Spicy Chicken" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Spicy Chicken</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">سبايسي تشكن</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">470</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشكن بيستو.jpeg" alt="Chicken Pesto" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Chicken Pesto</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشكن بيستو</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/كلاسيك ستيك--19.jpg" alt="Classic Steak" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Classic Steak</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">كلاسيك ستيك</p>
+                      <p class="description" dir="ltr">Steak, barbecue sauce, cheese and mayonnaise.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">ستيك لحم، صوص باربيكيو، جبنة ومايونيز.</p>
+                      
+                        <p class="price">650</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشيز ستيك--23.jpg" alt="Cheese Steak" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Cheese Steak</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشيز ستيك</p>
+                      <p class="description" dir="ltr">Steak, mozzarella and special sauce.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">ستيك، جبنة موزاريلا وصوص خاص.</p>
+                      
+                        <p class="price">750</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/ترافل ستيك --17.jpg" alt="Truffle Steak" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Truffle Steak</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">ترافل ستيك</p>
+                      <p class="description" dir="ltr">Steak, truffle sauce and cheese.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">ستيك، صوص ترافل وجبنة.</p>
+                      
+                        <p class="price">800</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/باربكيو ستيك --24.jpg" alt="Barbecue Steak" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Barbecue Steak</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">باربكيو ستيك</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">750</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Escalope</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">اسكالوب</p>
+                      <p class="description" dir="ltr">Escalope, special sauce, mayonnaise and cheese.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">اسكالوب، صوص خاص، مايونيز وجبنة.</p>
+                      
+                        <p class="price">450</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/تشكن سيزر +سكالوب--22.jpg" alt="Chicken Caesar" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Chicken Caesar</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشكن سيزر</p>
+                      <p class="description" dir="ltr">Chicken, Caesar sauce and parmesan.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">تشكن، صوص سيزر وبارميزان.</p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/سكالوب ميلانيز --25.jpg" alt="Escalope Milanese" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Escalope Milanese</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">اسكالوب ميلانيز</p>
+                      <p class="description" dir="ltr">Escalope, Milanese sauce and cheese.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">اسكالوب، صوص ميلانيز وجبنة.</p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Cheesy Escalope</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشيزي اسكالوب</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Pesto Escalope</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">بيستو اسكالوب</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">500</p>
+                      
+                    </div>
+                  </article>
+                
+              </div>
+            </section>
+          
+            <section class="category" id="lunch-appetizers" aria-labelledby="lunch-appetizers-title">
+              <header class="category__heading">
+                <h2 id="lunch-appetizers-title">Appetizers</h2>
+              </header>
+
+              <div class="items-grid">
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/فرايز-31.jpg" alt="Fries" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Fries</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">فرايز</p>
+                      <p class="description" dir="ltr">Crispy golden fries.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">بطاطا ذهبية مقرمشة.</p>
+                      
+                        <p class="price">300</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/فرايز تشيزي --34.jpg" alt="Cheese Fries" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Cheese Fries</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">تشيزي فرايز</p>
+                      <p class="description" dir="ltr">Crispy fries with melted cheese.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">بطاطا مقرمشة مع جبنة ذائبة.</p>
+                      
+                        <p class="price">450</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/ترافل فرايز --21.jpg" alt="Truffle Fries" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Truffle Fries</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">ترافل فرايز</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">450</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Mozzarella Sticks</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">موزريلا ستيكس</p>
+                      <p class="description" dir="ltr">Golden mozzarella sticks.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">أصابع موزاريلا ذهبية.</p>
+                      
+                        <p class="price">400</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/سيزر --33.jpg" alt="Caesar" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Caesar</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">سيزر</p>
+                      <p class="description" dir="ltr">Crisp greens with Caesar dressing.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">خضار طازجة مع صوص سيزر.</p>
+                      
+                        <p class="price">450</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/روكا_-32.jpg" alt="Rocket" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Rocket</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">روكا</p>
+                      <p class="description" dir="ltr"></p>
+                      <p class="description description--ar" lang="ar" dir="rtl"></p>
+                      
+                        <p class="price">400</p>
+                      
+                    </div>
+                  </article>
+                
+              </div>
+            </section>
+          
+        </div>
+      
+        <div class="menu-panel" id="drinks-panel" data-panel="drinks" hidden>
+          
+            <section class="category" id="drinks" aria-labelledby="drinks-title">
+              <header class="category__heading">
+                <h2 id="drinks-title">Drinks</h2>
+              </header>
+
+              <div class="items-grid">
+                
+                  <article class="menu-item">
+                    
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Water</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">ماء</p>
+                      <p class="description" dir="ltr">Still mineral water.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">مياه معدنية.</p>
+                      
+                        <p class="price">50</p>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Cola</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">كولا</p>
+                      <p class="description" dir="ltr">Chilled cola.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">كولا باردة.</p>
+                      
+                        <p class="price price--pending">Price coming soon</p>
+                      
+                    </div>
+                  </article>
+                
+              </div>
+            </section>
+          
+        </div>
+      
+
+      <footer class="menu-footer"><div class="checker" aria-hidden="true"></div><p>Buon appetito!</p></footer>
+    </main>
+    <script src="/js/menu.js"></script>
+  </body>
+</html>
