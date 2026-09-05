@@ -34,6 +34,11 @@ button { font: inherit; }
 .header__eyebrow { margin: 0 0 .45rem; color: #ffe2dc; font-size: .7rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
 .header h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 8vw, 4.75rem); letter-spacing: .08em; line-height: 1; text-shadow: 0 3px 0 rgb(0 0 0 / 16%); }
 .header__subtitle { margin: .65rem 0 0; color: #fff; font-size: .9rem; font-weight: 700; }
+.header__order { display: inline-flex; flex-direction: column; gap: .18rem; margin-top: 1rem; padding-bottom: .2rem; color: #fff; text-align: center; text-decoration: none; border-bottom: 2px solid #fff; }
+.header__order span { font-size: .7rem; font-weight: 700; }
+.header__order strong { font-size: 1.2rem; letter-spacing: 0; }
+.header__order:hover, .header__order:focus-visible { border-bottom-color: #ffe2dc; outline: none; }
+.header__order:focus-visible { box-shadow: 0 3px 0 #ffe2dc; }
 
 /* The checkerboard frames the tabs and footer; content always sits on plain surfaces. */
 .checker { height: 20px; background: conic-gradient(var(--red) 25%, #fff 0 50%, var(--red) 0 75%, #fff 0) 0 / 28px 28px; }
