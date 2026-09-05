@@ -21,13 +21,13 @@
       <div class="checker" aria-hidden="true"></div>
 
       <nav class="menu-tabs" aria-label="Main menu sections">
-        <button class="menu-tab is-active" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="true">BREAKFAST</button>
-        <button class="menu-tab" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="false">LUNCH</button>
+        <button class="menu-tab" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="false">BREAKFAST</button>
+        <button class="menu-tab is-active" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="true">LUNCH</button>
         <button class="menu-tab" type="button" data-tab="drinks" aria-controls="drinks-panel" aria-selected="false">DRINKS</button>
       </nav>
 
       <% ["breakfast", "lunch", "drinks"].forEach(mainSection => { %>
-        <div class="menu-panel" id="<%= mainSection %>-panel" data-panel="<%= mainSection %>" <%= mainSection === "breakfast" ? "" : "hidden" %>>
+        <div class="menu-panel" id="<%= mainSection %>-panel" data-panel="<%= mainSection %>" <%= mainSection === "lunch" ? "" : "hidden" %>>
           <% menuData.filter(category => category.mainSection === mainSection).forEach(category => { %>
             <section class="category" id="<%= category.id %>" aria-labelledby="<%= category.id %>-title">
               <header class="category__heading">

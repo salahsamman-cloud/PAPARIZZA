@@ -21,13 +21,13 @@
       <div class="checker" aria-hidden="true"></div>
 
       <nav class="menu-tabs" aria-label="Main menu sections">
-        <button class="menu-tab is-active" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="true">BREAKFAST</button>
-        <button class="menu-tab" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="false">LUNCH</button>
+        <button class="menu-tab" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="false">BREAKFAST</button>
+        <button class="menu-tab is-active" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="true">LUNCH</button>
         <button class="menu-tab" type="button" data-tab="drinks" aria-controls="drinks-panel" aria-selected="false">DRINKS</button>
       </nav>
 
       
-        <div class="menu-panel" id="breakfast-panel" data-panel="breakfast" >
+        <div class="menu-panel" id="breakfast-panel" data-panel="breakfast" hidden>
           
             <section class="category" id="breakfast-pizza" aria-labelledby="breakfast-pizza-title">
               <header class="category__heading">
@@ -186,7 +186,7 @@
           
         </div>
       
-        <div class="menu-panel" id="lunch-panel" data-panel="lunch" hidden>
+        <div class="menu-panel" id="lunch-panel" data-panel="lunch" >
           
             <section class="category" id="lunch-pizza" aria-labelledby="lunch-pizza-title">
               <header class="category__heading">
@@ -194,24 +194,6 @@
               </header>
 
               <div class="items-grid">
-                
-                  <article class="menu-item">
-                    
-                      <img class="menu-item__image" src="/images/بيتزا نابوليتان.jpeg" alt="Napoletana" loading="lazy" />
-                    
-                    <div class="menu-item__content">
-                      <h3 dir="ltr">Napoletana</h3>
-                      <p class="item-name-ar" lang="ar" dir="rtl">نابوليتان</p>
-                      <p class="description" dir="ltr">Napoletana sauce, mozzarella and parmesan.</p>
-                      <p class="description description--ar" lang="ar" dir="rtl">صوص نابوليتان، موزاريلا وبارميزان.</p>
-                      
-                        <div class="pizza-prices" aria-label="Pizza prices">
-                          <span><b>SMALL</b> 350</span>
-                          <span><b>MEDIUM</b> 700</span>
-                        </div>
-                      
-                    </div>
-                  </article>
                 
                   <article class="menu-item">
                     
@@ -226,6 +208,24 @@
                         <div class="pizza-prices" aria-label="Pizza prices">
                           <span><b>SMALL</b> 400</span>
                           <span><b>MEDIUM</b> 800</span>
+                        </div>
+                      
+                    </div>
+                  </article>
+                
+                  <article class="menu-item">
+                    
+                      <img class="menu-item__image" src="/images/بيتزا نابوليتان.jpeg" alt="Napoletana" loading="lazy" />
+                    
+                    <div class="menu-item__content">
+                      <h3 dir="ltr">Napoletana</h3>
+                      <p class="item-name-ar" lang="ar" dir="rtl">نابوليتان</p>
+                      <p class="description" dir="ltr">Napoletana sauce, mozzarella and parmesan.</p>
+                      <p class="description description--ar" lang="ar" dir="rtl">صوص نابوليتان، موزاريلا وبارميزان.</p>
+                      
+                        <div class="pizza-prices" aria-label="Pizza prices">
+                          <span><b>SMALL</b> 350</span>
+                          <span><b>MEDIUM</b> 700</span>
                         </div>
                       
                     </div>

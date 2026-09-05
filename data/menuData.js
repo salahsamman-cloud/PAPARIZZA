@@ -31,8 +31,8 @@ const menuData = [
     categoryEn: "Pizza",
     categoryAr: "بيتزا",
     items: [
-      { nameEn: "Napoletana", nameAr: "نابوليتان", descriptionEn: "Napoletana sauce, mozzarella and parmesan.", descriptionAr: "صوص نابوليتان، موزاريلا وبارميزان.", smallPrice: "350", largePrice: "700", image: "/images/بيتزا نابوليتان.jpeg" },
       { nameEn: "Vegetables", nameAr: "خضار", descriptionEn: "Neapolitan sauce, mozzarella, mushroom, olives, bell pepper", descriptionAr: "صوص نابوليتان، موزريلا، فطر، زيتون، فليفلة", smallPrice: "400", largePrice: "800", image: "/images/بيتزا خضار --1.jpg" },
+      { nameEn: "Napoletana", nameAr: "نابوليتان", descriptionEn: "Napoletana sauce, mozzarella and parmesan.", descriptionAr: "صوص نابوليتان، موزاريلا وبارميزان.", smallPrice: "350", largePrice: "700", image: "/images/بيتزا نابوليتان.jpeg" },
       { nameEn: "Mushroom", nameAr: "فطر", descriptionEn: "Mushroom sauce, mushroom, mozzarella, parmesan", descriptionAr: "صوص الفطر، فطر، موزريلا، بارمزان", smallPrice: "400", largePrice: "800", image: "/images/بيتزا ماشروم--3.jpg" },
       { nameEn: "Truffle", nameAr: "ترافل", descriptionEn: "Truffle sauce, mushroom, mozzarella", descriptionAr: "صوص ترافل، فطر، موزريلا", smallPrice: "500", largePrice: "1000", image: "/images/بيتزا ترفل.jpeg" },
       { nameEn: "Pepperoni", nameAr: "بيروني", descriptionEn: "", descriptionAr: "", smallPrice: "400", largePrice: "800", image: "/images/بيتزا ببروني --8.jpg" },
