@@ -1,4 +1,4 @@
-// Menu content is kept separate from the EJS layout for easier updates.
+﻿// Menu content is kept separate from the EJS layout for easier updates.
 const menuData = [
   {
     id: "breakfast-pizza",
@@ -35,10 +35,10 @@ const menuData = [
       { nameEn: "Napoletana", nameAr: "نابوليتان", descriptionEn: "Napoletana sauce, mozzarella and parmesan.", descriptionAr: "صوص نابوليتان، موزاريلا وبارميزان.", smallPrice: "350", largePrice: "700", image: "/images/بيتزا نابوليتان.jpeg" },
       { nameEn: "Mushroom", nameAr: "فطر", descriptionEn: "Mushroom sauce, mushroom, mozzarella, parmesan", descriptionAr: "صوص الفطر، فطر، موزريلا، بارمزان", smallPrice: "400", largePrice: "800", image: "/images/بيتزا ماشروم--3.jpeg" },
       { nameEn: "Truffle", nameAr: "ترافل", descriptionEn: "Truffle sauce, mushroom, mozzarella", descriptionAr: "صوص ترافل، فطر، موزريلا", smallPrice: "500", largePrice: "1000", image: "/images/بيتزا ترفل.jpeg" },
-      { nameEn: "Pepperoni", nameAr: "بيروني", descriptionEn: "", descriptionAr: "", smallPrice: "400", largePrice: "800", image: "/images/بيتزا ببروني --8.jpeg" },
-      { nameEn: "Turkey", nameAr: "حبش", descriptionEn: "", descriptionAr: "", smallPrice: "350", largePrice: "700", image: "/images/بيتزا حبش--5.jpeg" },
-      { nameEn: "Pesto", nameAr: "بيستو", descriptionEn: "", descriptionAr: "", smallPrice: "400", largePrice: "800", image: "/images/بيتزا بيستو.jpeg" },
-      { nameEn: "Four Cheese", nameAr: "فور تشيز", descriptionEn: "", descriptionAr: "", smallPrice: "400", largePrice: "800", image: "/images/بيتزا فورتشيز.jpeg" },
+      { nameEn: "Pepperoni", nameAr: "بيروني", descriptionEn: "", descriptionAr: "", smallPrice: "450", largePrice: "900", image: "/images/بيتزا ببروني --8.jpeg" },
+      { nameEn: "Turkey", nameAr: "حبش", descriptionEn: "", descriptionAr: "", smallPrice: "450", largePrice: "900", image: "/images/بيتزا حبش--5.jpeg" },
+      { nameEn: "Pesto", nameAr: "بيستو", descriptionEn: "", descriptionAr: "", smallPrice: "500", largePrice: "1000", image: "/images/بيتزا بيستو.jpeg" },
+      { nameEn: "Four Cheese", nameAr: "فور تشيز", descriptionEn: "", descriptionAr: "", smallPrice: "450", largePrice: "900", image: "/images/بيتزا فورتشيز.jpeg" },
       { nameEn: "Smoky Chicken", nameAr: "سموكي تشكن", descriptionEn: "", descriptionAr: "", smallPrice: "550", largePrice: "1000", image: "/images/بيتزا سموك تشيكن -_-7.jpeg" }
     ]
   },
@@ -48,20 +48,20 @@ const menuData = [
     categoryEn: "Panuzzo",
     categoryAr: "بانوتزو",
     items: [
-      { nameEn: "Classic Chicken", nameAr: "كلاسيك تشكن", descriptionEn: "Fried chicken, chicken sauce, lettuce and mayonnaise.", descriptionAr: "دجاج مقلي، صوص تشكن، خس ومايونيز.", price: "450", image: "/images/تشيكن كلاسيك --15.jpeg" },
-      { nameEn: "Chicken Barbecue", nameAr: "تشكن باربكيو", descriptionEn: "Chicken, barbecue sauce, lettuce and mayonnaise.", descriptionAr: "دجاج، صوص باربكيو، خس ومايونيز.", price: "500", image: "/images/تشكن باربركيو --20.jpeg" },
-      { nameEn: "Chicken Honey Mustard", nameAr: "تشكن هني ماسترد", descriptionEn: "Chicken, honey mustard, lettuce and mayonnaise.", descriptionAr: "دجاج، هني ماسترد، خس ومايونيز.", price: "500", image: "/images/تشكن هاني ماستر --16.jpeg" },
-      { nameEn: "Spicy Chicken", nameAr: "سبايسي تشكن", descriptionEn: "", descriptionAr: "", price: "470", image: "/images/تشكن سبايسي--18.jpeg" },
-      { nameEn: "Chicken Pesto", nameAr: "تشكن بيستو", descriptionEn: "", descriptionAr: "", price: "500", image: "/images/تشكن بيستو.jpeg" },
-      { nameEn: "Classic Steak", nameAr: "كلاسيك ستيك", descriptionEn: "Steak, barbecue sauce, cheese and mayonnaise.", descriptionAr: "ستيك لحم، صوص باربيكيو، جبنة ومايونيز.", price: "650", image: "/images/كلاسيك ستيك--19.jpg" },
-      { nameEn: "Cheese Steak", nameAr: "تشيز ستيك", descriptionEn: "Steak, mozzarella and special sauce.", descriptionAr: "ستيك، جبنة موزاريلا وصوص خاص.", price: "750", image: "/images/تشيز ستيك--23.jpeg" },
-      { nameEn: "Truffle Steak", nameAr: "ترافل ستيك", descriptionEn: "Steak, truffle sauce and cheese.", descriptionAr: "ستيك، صوص ترافل وجبنة.", price: "800", image: "/images/ترافل ستيك --17.jpeg" },
-      { nameEn: "Barbecue Steak", nameAr: "باربكيو ستيك", descriptionEn: "", descriptionAr: "", price: "750", image: "/images/باربكيو ستيك --24.jpeg" },
-      { nameEn: "Escalope", nameAr: "اسكالوب", descriptionEn: "Escalope, special sauce, mayonnaise and cheese.", descriptionAr: "اسكالوب، صوص خاص، مايونيز وجبنة.", price: "450", image: "/images/اسكالوب.jpeg" },
-      { nameEn: "Chicken Caesar", nameAr: "تشكن سيزر", descriptionEn: "Chicken, Caesar sauce and parmesan.", descriptionAr: "تشكن، صوص سيزر وبارميزان.", price: "500", image: "/images/تشكن سيزر +سكالوب--22.jpeg" },
-      { nameEn: "Escalope Milanese", nameAr: "اسكالوب ميلانيز", descriptionEn: "Escalope, Milanese sauce and cheese.", descriptionAr: "اسكالوب، صوص ميلانيز وجبنة.", price: "500", image: "/images/سكالوب ميلانيز --25.jpeg" },
-      { nameEn: "Cheesy Escalope", nameAr: "تشيزي اسكالوب", descriptionEn: "", descriptionAr: "", price: "500", image: "/images/تشيز اسكالوب.jpeg" },
-      { nameEn: "Pesto Escalope", nameAr: "بيستو اسكالوب", descriptionEn: "", descriptionAr: "", price: "500", image: "/images/بيستو اسكالوب.jpeg" }
+      { nameEn: "Classic Chicken", nameAr: "كلاسيك تشكن", descriptionEn: "Fried chicken, chicken sauce, lettuce and mayonnaise.", descriptionAr: "دجاج مقلي، صوص تشكن، خس ومايونيز.", price: "500", image: "/images/تشيكن كلاسيك --15.jpeg" },
+      { nameEn: "Chicken Barbecue", nameAr: "تشكن باربكيو", descriptionEn: "Chicken, barbecue sauce, lettuce and mayonnaise.", descriptionAr: "دجاج، صوص باربكيو، خس ومايونيز.", price: "550", image: "/images/تشكن باربركيو --20.jpeg" },
+      { nameEn: "Chicken Honey Mustard", nameAr: "تشكن هني ماسترد", descriptionEn: "Chicken, honey mustard, lettuce and mayonnaise.", descriptionAr: "دجاج، هني ماسترد، خس ومايونيز.", price: "550", image: "/images/تشكن هاني ماستر --16.jpeg" },
+      { nameEn: "Spicy Chicken", nameAr: "سبايسي تشكن", descriptionEn: "", descriptionAr: "", price: "550", image: "/images/تشكن سبايسي--18.jpeg" },
+      { nameEn: "Chicken Pesto", nameAr: "تشكن بيستو", descriptionEn: "", descriptionAr: "", price: "550", image: "/images/تشكن بيستو.jpeg" },
+      { nameEn: "Classic Steak", nameAr: "كلاسيك ستيك", descriptionEn: "Steak, barbecue sauce, cheese and mayonnaise.", descriptionAr: "ستيك لحم، صوص باربيكيو، جبنة ومايونيز.", price: "700", image: "/images/كلاسيك ستيك--19.jpg" },
+      { nameEn: "Cheese Steak", nameAr: "تشيز ستيك", descriptionEn: "Steak, mozzarella and special sauce.", descriptionAr: "ستيك، جبنة موزاريلا وصوص خاص.", price: "800", image: "/images/تشيز ستيك--23.jpeg" },
+      { nameEn: "Truffle Steak", nameAr: "ترافل ستيك", descriptionEn: "Steak, truffle sauce and cheese.", descriptionAr: "ستيك، صوص ترافل وجبنة.", price: "900", image: "/images/ترافل ستيك --17.jpeg" },
+      { nameEn: "Barbecue Steak", nameAr: "باربكيو ستيك", descriptionEn: "", descriptionAr: "", price: "800", image: "/images/باربكيو ستيك --24.jpeg" },
+      { nameEn: "Escalope", nameAr: "اسكالوب", descriptionEn: "Escalope, special sauce, mayonnaise and cheese.", descriptionAr: "اسكالوب، صوص خاص، مايونيز وجبنة.", price: "500", image: "/images/اسكالوب.jpeg" },
+      { nameEn: "Chicken Caesar", nameAr: "تشكن سيزر", descriptionEn: "Chicken, Caesar sauce and parmesan.", descriptionAr: "تشكن، صوص سيزر وبارميزان.", price: "550", image: "/images/تشكن سيزر +سكالوب--22.jpeg" },
+      { nameEn: "Escalope Milanese", nameAr: "اسكالوب ميلانيز", descriptionEn: "Escalope, Milanese sauce and cheese.", descriptionAr: "اسكالوب، صوص ميلانيز وجبنة.", price: "550", image: "/images/سكالوب ميلانيز --25.jpeg" },
+      { nameEn: "Cheesy Escalope", nameAr: "تشيزي اسكالوب", descriptionEn: "", descriptionAr: "", price: "600", image: "/images/تشيز اسكالوب.jpeg" },
+      { nameEn: "Pesto Escalope", nameAr: "بيستو اسكالوب", descriptionEn: "", descriptionAr: "", price: "700", image: "/images/بيستو اسكالوب.jpeg" }
     ]
   },
   {
@@ -91,3 +91,4 @@ const menuData = [
 ];
 
 export default menuData;
+
