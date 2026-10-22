@@ -85,10 +85,11 @@ const menuData = [
     categoryAr: "المشروبات",
     items: [
       { nameEn: "Water", nameAr: "ماء", descriptionEn: "Still mineral water.", descriptionAr: "مياه معدنية.", price: "50" },
-      { nameEn: "Cola", nameAr: "كولا", descriptionEn: "Chilled cola.", descriptionAr: "كولا باردة.", price: "" }
+      { nameEn: "Cola", nameAr: "كولا", descriptionEn: "Chilled cola.", descriptionAr: "كولا باردة.", price: "100" }
     ]
   }
 ];
 
 export default menuData;
+
 
