@@ -53,7 +53,7 @@ const menuData = [
       { nameEn: "Chicken Honey Mustard", nameAr: "تشكن هني ماسترد", descriptionEn: "Chicken, honey mustard, lettuce and mayonnaise.", descriptionAr: "دجاج، هني ماسترد، خس ومايونيز.", price: "550", image: "/images/تشكن هاني ماستر --16.jpeg" },
       { nameEn: "Spicy Chicken", nameAr: "سبايسي تشكن", descriptionEn: "", descriptionAr: "", price: "550", image: "/images/تشكن سبايسي--18.jpeg" },
       { nameEn: "Chicken Pesto", nameAr: "تشكن بيستو", descriptionEn: "", descriptionAr: "", price: "550", image: "/images/تشكن بيستو.jpeg" },
-      { nameEn: "Classic Steak", nameAr: "كلاسيك ستيك", descriptionEn: "Steak, barbecue sauce, cheese and mayonnaise.", descriptionAr: "ستيك لحم، صوص باربيكيو، جبنة ومايونيز.", price: "700", image: "/images/كلاسيك ستيك--19.jpg" },
+      { nameEn: "Classic Steak", nameAr: "كلاسيك ستيك", descriptionEn: "Steak, barbecue sauce, cheese and mayonnaise.", descriptionAr: "ستيك لحم، صوص باربيكيو، جبنة ومايونيز.", price: "700", image: "/images/كلاسيك ستيك--19.jpeg" },
       { nameEn: "Cheese Steak", nameAr: "تشيز ستيك", descriptionEn: "Steak, mozzarella and special sauce.", descriptionAr: "ستيك، جبنة موزاريلا وصوص خاص.", price: "800", image: "/images/تشيز ستيك--23.jpeg" },
       { nameEn: "Truffle Steak", nameAr: "ترافل ستيك", descriptionEn: "Steak, truffle sauce and cheese.", descriptionAr: "ستيك، صوص ترافل وجبنة.", price: "900", image: "/images/ترافل ستيك --17.jpeg" },
       { nameEn: "Barbecue Steak", nameAr: "باربكيو ستيك", descriptionEn: "", descriptionAr: "", price: "800", image: "/images/باربكيو ستيك --24.jpeg" },
@@ -86,6 +86,15 @@ const menuData = [
     items: [
       { nameEn: "Water", nameAr: "ماء", descriptionEn: "Still mineral water.", descriptionAr: "مياه معدنية.", price: "50" },
       { nameEn: "Cola", nameAr: "كولا", descriptionEn: "Chilled cola.", descriptionAr: "كولا باردة.", price: "100" }
+    ]
+  },
+  {
+    id: "desserts",
+    mainSection: "desserts",
+    categoryEn: "Desserts",
+    categoryAr: "الحلويات",
+    items: [
+      { nameEn: "Nutella Pizza", nameAr: "بيتزا نوتيلا", descriptionEn: "", descriptionAr: "", smallPrice: "500", largePrice: "1000", image: "/images/nutella.jpeg" }
     ]
   }
 ];
