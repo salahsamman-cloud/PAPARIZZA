@@ -3,71 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#EE2829" />
+    <meta name="theme-color" content="#b51f2b" />
+    <meta name="description" content="Explore the PAPARIZZA menu: pizza, Panuzzo, breakfast, appetizers, desserts and drinks." />
     <title><%= restaurantName %> Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <main class="menu-board">
-      <header class="header">
-        <h1>PAPARIZZA</h1>
-        <p class="header__subtitle">PIZZA &amp; ITALIAN SANDWICHES</p>
-        <a class="header__order" href="tel:0113338086" aria-label="Call PAPARIZZA to order at 0113338086">
-          <span>ORDER NOW / CALL TO ORDER</span>
-          <strong dir="ltr">0113338086</strong>
-        </a>
+      <header class="header" id="top">
+        <div class="header__identity"><h1>PAPARIZZA</h1><p class="header__subtitle">PIZZA &amp; ITALIAN SANDWICHES</p></div>
+        <a class="header__order" href="tel:0113338086" aria-label="Call PAPARIZZA to order at 0113338086"><span>CALL TO ORDER</span><strong dir="ltr">0113338086</strong></a>
       </header>
-
       <div class="checker" aria-hidden="true"></div>
 
-      <nav class="menu-tabs" aria-label="Main menu sections">
-        <button class="menu-tab" type="button" data-tab="breakfast" aria-controls="breakfast-panel" aria-selected="false">BREAKFAST</button>
-        <button class="menu-tab is-active" type="button" data-tab="lunch" aria-controls="lunch-panel" aria-selected="true">LUNCH</button>
-        <button class="menu-tab" type="button" data-tab="drinks" aria-controls="drinks-panel" aria-selected="false">DRINKS</button>
+      <section class="hero" aria-label="Featured dishes">
+        <div class="hero__viewport">
+          <div class="hero__slides">
+            <article class="hero-slide is-active" data-slide aria-hidden="false">
+              <img src="/images/تشكن هاني ماستر --16.jpeg" alt="Chicken Honey Mustard Panuzzo" fetchpriority="high" />
+            </article>
+            <article class="hero-slide" data-slide aria-hidden="true">
+              <img src="/images/بيتزا نابوليتان.jpeg" alt="Neapolitan Pizza" loading="lazy" />
+            </article>
+            <article class="hero-slide" data-slide aria-hidden="true">
+              <img src="/images/لبنة مع خضرة --35.jpeg" alt="Breakfast Labneh with Greens" loading="lazy" />
+            </article>
+            <article class="hero-slide" data-slide aria-hidden="true">
+              <img src="/images/nutella.jpeg" alt="Nutella Pizza" loading="lazy" />
+            </article>
+          </div>
+        </div>
+        <div class="hero-controls">
+          <a class="hero-cta" href="#menu-categories" lang="en" dir="ltr">Explore Menu</a>
+          <div class="hero-dots" role="group" aria-label="Choose featured image"><button class="hero-dot is-active" type="button" aria-label="Show featured image 1" aria-current="true"></button><button class="hero-dot" type="button" aria-label="Show featured image 2"></button><button class="hero-dot" type="button" aria-label="Show featured image 3"></button><button class="hero-dot" type="button" aria-label="Show featured image 4"></button></div>
+        </div>
+      </section>
+
+      <% const sections = [
+        { id: "pizza", label: "Pizza", categoryIds: ["lunch-pizza"] },
+        { id: "panuzzo", label: "Panuzzo", categoryIds: ["lunch-panuzzo"] },
+        { id: "breakfast", label: "Breakfast", categoryIds: ["breakfast-pizza", "breakfast-panuzzo"] },
+        { id: "appetizers", label: "Appetizers", categoryIds: ["lunch-appetizers"] },
+        { id: "desserts", label: "Desserts", categoryIds: ["desserts"] },
+        { id: "drinks", label: "Drinks", categoryIds: ["drinks"] }
+      ]; %>
+      <nav class="category-nav" id="menu-categories" aria-label="Menu categories">
+        <div class="category-nav__inner"><% sections.forEach((section, index) => { %><a class="category-link <%= index === 0 ? 'is-active' : '' %>" href="#<%= section.id %>" data-category-link="<%= section.id %>"><span><%= section.label %></span></a><% }) %></div>
       </nav>
 
-      <% ["breakfast", "lunch", "drinks"].forEach(mainSection => { %>
-        <div class="menu-panel" id="<%= mainSection %>-panel" data-panel="<%= mainSection %>" <%= mainSection === "lunch" ? "" : "hidden" %>>
-          <% menuData.filter(category => category.mainSection === mainSection).forEach(category => { %>
-            <section class="category" id="<%= category.id %>" aria-labelledby="<%= category.id %>-title">
-              <header class="category__heading">
-                <h2 id="<%= category.id %>-title"><%= category.categoryEn %></h2>
-              </header>
-
+      <div class="menu-content">
+        <% sections.forEach(section => { %>
+          <section class="menu-section" id="<%= section.id %>" data-menu-section aria-labelledby="<%= section.id %>-title">
+            <header class="section-heading"><h2 id="<%= section.id %>-title"><%= section.label %></h2></header>
+            <% menuData.filter(category => section.categoryIds.includes(category.id)).forEach(category => { %>
+              <% if (section.categoryIds.length > 1) { %><h3 class="sub-category"><%= category.categoryEn %></h3><% } %>
               <div class="items-grid">
                 <% category.items.forEach(item => { %>
                   <article class="menu-item">
-                    <% if (item.image) { %>
-                      <img class="menu-item__image" src="<%= item.image %>" alt="<%= item.nameEn %>" loading="lazy" />
-                    <% } else { %>
-                      <div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div>
-                    <% } %>
-                    <div class="menu-item__content">
-                      <h3 dir="ltr"><%= item.nameEn %></h3>
-                      <p class="item-name-ar" lang="ar" dir="rtl"><%= item.nameAr %></p>
-                      <p class="description" dir="ltr"><%= item.descriptionEn %></p>
-                      <p class="description description--ar" lang="ar" dir="rtl"><%= item.descriptionAr %></p>
-                      <% if (item.smallPrice && item.largePrice) { %>
-                        <div class="pizza-prices" aria-label="Pizza prices">
-                          <span><b>SMALL</b> <%= item.smallPrice %></span>
-                          <span><b>MEDIUM</b> <%= item.largePrice %></span>
-                        </div>
-                      <% } else if (item.price) { %>
-                        <p class="price"><%= item.price %></p>
-                      <% } else { %>
-                        <p class="price price--pending">Price coming soon</p>
-                      <% } %>
+                    <% if (item.image) { %><img class="menu-item__image" src="<%= item.image %>" alt="<%= item.nameEn %>" loading="lazy" />
+                    <% } else { %><div class="menu-item__placeholder" aria-hidden="true"><span>PAPARIZZA</span></div><% } %>
+                    <div class="menu-item__content"><div class="item-heading"><h3 dir="ltr"><%= item.nameEn %></h3><p class="item-name-ar" lang="ar" dir="rtl"><%= item.nameAr %></p></div>
+                      <% if (item.descriptionEn) { %><p class="description" dir="ltr"><%= item.descriptionEn %></p><% } %>
+                      <% if (item.descriptionAr) { %><p class="description description--ar" lang="ar" dir="rtl"><%= item.descriptionAr %></p><% } %>
+                      <% if (item.smallPrice && item.largePrice) { %><div class="pizza-prices" aria-label="Small and large prices"><span><b>SMALL</b><strong><%= item.smallPrice %></strong></span><span><b>LARGE</b><strong><%= item.largePrice %></strong></span></div>
+                      <% } else if (item.price) { %><p class="price"><%= item.price %></p><% } else { %><p class="price price--pending">Price coming soon</p><% } %>
                     </div>
                   </article>
                 <% }) %>
               </div>
-            </section>
-          <% }) %>
-        </div>
-      <% }) %>
-
-      <footer class="menu-footer"><div class="checker" aria-hidden="true"></div><p>Buon appetito!</p></footer>
+            <% }) %>
+          </section>
+        <% }) %>
+      </div>
     </main>
-    <script src="/js/menu.js"></script>
+    <script src="/js/menu.js" defer></script>
   </body>
 </html>
